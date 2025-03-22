@@ -8,7 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import '@/styles/home.scss';
 import { Product, ProductsResponse } from '@/types/product';
 import { getProducts } from '@/utils/API';
-import { Loading } from '@/components/Loading';
+import Loading from '@/components/Loading';
 import { ProductCard } from '@/components/ProductCard';
 import { useCart } from '@/context/CartContext';
 
@@ -25,7 +25,7 @@ export default function Home() {
 
   const { data, isLoading, error } = useQuery<ProductsResponse>({
     queryKey: ['products', page],
-    queryFn: () => getProducts(100, 0), // Barcha mahsulotlarni olamiz
+    queryFn: () => getProducts(100, 0), 
     placeholderData: (previousData) => previousData,
   });
 
@@ -43,17 +43,17 @@ export default function Home() {
 
   const handleCategoryChange = (event: any) => {
     setCategory(event.target.value);
-    setPage(1); // Kategoriya o'zgarganda birinchi sahifaga qaytish
+    setPage(1); 
   };
 
   const handleBrandChange = (event: any) => {
     setBrand(event.target.value);
-    setPage(1); // Brand o'zgarganda birinchi sahifaga qaytish
+    setPage(1); 
   };
 
   const handlePriceRangeChange = (event: any) => {
     setPriceRange(event.target.value);
-    setPage(1); // Narx oralig'i o'zgarganda birinchi sahifaga qaytish
+    setPage(1); 
   };
 
   const handleClearFilters = () => {

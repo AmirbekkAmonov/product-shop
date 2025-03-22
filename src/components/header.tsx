@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__container container">
+      <div className="header__container">
         <Link href="/" className="header__logo">
           OnlineDokon
         </Link>
@@ -43,7 +43,7 @@ const Header = () => {
 
         <nav className="header__nav">
           <Link href="/cart" className="header__cart">
-            🛒 
+            <ShoppingCart size={24} />
             {totalItems > 0 && (
               <span className="header__cart-count">{totalItems}</span>
             )}

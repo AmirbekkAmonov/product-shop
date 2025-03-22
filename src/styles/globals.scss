@@ -21,6 +21,10 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -44,4 +48,14 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
 } 

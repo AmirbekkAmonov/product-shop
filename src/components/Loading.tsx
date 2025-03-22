@@ -1,10 +1,13 @@
 import React from 'react';
+import '@/styles/loading.scss';
 
-export const Loading = () => {
+const Loading = () => {
   return (
     <div className="loading">
       <div className="loading__spinner"></div>
       <p className="loading__text">Yuklanmoqda...</p>
     </div>
   );
-}; 
+};
+
+export default Loading; 

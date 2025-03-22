@@ -1,21 +1,22 @@
 "use client";
 
 import React from 'react';
-import { Geist } from 'next/font/google';
-import { Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { CartProvider } from '@/context/CartContext';
 import Header from '@/components/header';
 import '@/styles/globals.scss';
 
-const geist = Geist({ subsets: ['latin'] });
-const geistMono = Geist_Mono({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+});
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes
-      gcTime: 1000 * 60 * 30, // 30 minutes
+      staleTime: 1000 * 60 * 5,     
+      gcTime: 1000 * 60 * 30, 
     },
   },
 });
@@ -27,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="uz">
-      <body className={`${geist.className} ${geistMono.className}`}>
+      <body className={inter.className}>
         <QueryClientProvider client={queryClient}>
           <CartProvider>
             <Header />

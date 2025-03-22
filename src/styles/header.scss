@@ -1,5 +1,5 @@
 .header {
-    background: #fff;
+    background: var(--white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -18,12 +18,12 @@
     &__logo {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #2563eb;
+      color: var(--primary-color);
       text-decoration: none;
       transition: color 0.2s ease;
   
       &:hover {
-        color: #1d4ed8;
+        color: var(--primary-hover);
       }
     }
   
@@ -48,7 +48,7 @@
         transition: border-color 0.2s ease;
   
         &:focus {
-            border-color: #2563eb;
+            border-color: var(--primary-color);
         }
       }
   
@@ -63,7 +63,7 @@
         transition: color 0.2s ease;
   
         &:hover {
-          color: #2563eb;
+          color: var(--primary-color);
         }
       }
   
@@ -79,12 +79,12 @@
       gap: 1.5rem;
   
       &-link {
-        color: #4b5563;
+        color: var(--text-secondary);
         text-decoration: none;
         transition: color 0.2s ease;
   
         &:hover {
-          color: #2563eb;
+          color: var(--primary-color);
         }
       }
     }
@@ -94,19 +94,19 @@
       align-items: center;
       gap: 0.5rem;
       text-decoration: none;
-      color: #1a1a1a;
+      color: var(--text-color);
       font-weight: 500;
       position: relative;
       transition: color 0.2s ease;
   
       &:hover {
-        color: #2563eb;
+        color: var(--primary-color);
       }
     }
   
     &__cart-count {
-      background: #2563eb;
-      color: white;
+      background: var(--primary-color);
+      color: var(--white);
       font-size: 0.75rem;
       padding: 0.25rem 0.5rem;
       border-radius: 9999px;
