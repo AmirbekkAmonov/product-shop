@@ -6,7 +6,7 @@ import { useParams } from 'next/navigation';
 import '@/styles/product.scss';
 import { Product } from '@/types/product';
 import { getProductById } from '@/utils/API';
-import { Loading } from '@/components/Loading';
+import  Loading  from '@/components/Loading';
 
 export default function ProductDetail() {
   const params = useParams();
