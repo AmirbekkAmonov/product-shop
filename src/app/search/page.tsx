@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { Product } from '@/types/product';
 import { getProducts } from '@/utils/API';
-import { Loading } from '@/components/Loading';
+import  Loading  from '@/components/Loading';
 import { ProductCard } from '@/components/ProductCard';
 import { useCart } from '@/context/CartContext';
 import '@/styles/search.scss';
